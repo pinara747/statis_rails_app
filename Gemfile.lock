@@ -31,6 +31,7 @@ GEM
       multi_json (~> 1.0)
     addressable (2.2.8)
     arel (2.2.3)
+    bootstrap-sass (2.0.0)
     builder (3.0.0)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -144,6 +145,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (= 2.0.0)
   capybara (= 1.1.2)
   coffee-rails (~> 3.1.1)
   jquery-rails
