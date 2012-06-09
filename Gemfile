@@ -20,13 +20,14 @@ end
 group :assets do
   gem 'sass-rails',   '3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '>= 1.0.3'    
 end
 
 gem 'jquery-rails'   
 
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '1.4.0'
 end
 
 group :production do
