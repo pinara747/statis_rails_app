@@ -25,9 +25,17 @@ describe User do
   it { should respond_to(:password) }  
   it { should respond_to(:password_confirmation) } 
   it { should respond_to(:remember_token) }  
-  it { should respond_to(:authenticate) } 
+  it { should respond_to(:admin) }
+  it { should respond_to(:authenticate) }
 
   it { should be_valid }
+  it { should_not be_admin } 
+  
+  describe "with admin attribute set to 'true'" do
+    before { @user.toggle!(:admin) }
+
+    it { should be_admin }
+  end
 
   describe "when name is not present" do
     before { @user.name = " " }
@@ -54,7 +62,7 @@ describe User do
       addresses = %w[user@foo,com user_at_foo.org example.user@foo.foo@bar_baz.com foo@bar+baz.com]
       addresses.each do |invalid_address|
         @user.email = invalid_address
-        @user.should_not_be_valid
+        @user.should_not be_valid
       end
     end
   end
@@ -64,7 +72,7 @@ describe User do
       addresses = %w[user@foo.COM A_US-ER@f.b.org frst.lst@foo.jp a+b@baz.cn]
       addresses.each do |valid_address|
         @user.email = valid_address
-        @user.should_be_valid
+        @user.should be_valid
       end
     end
   end
@@ -97,22 +105,22 @@ describe User do
  describe "with a password that's too short" do
    before { @user.password = @user.password_confirmation = "a" * 5 }
    it { should be_invalid }
- end
+ end 
+ 
   describe "return value of authenticate method" do
     before { @user.save }
     let(:found_user) { User.find_by_email(@user.email) }
 
   describe "with valid password" do
     it { should == found_user.authenticate(@user.password) }
-  end  
-end
-
+  end 
   describe "with invalid password" do
     let(:user_for_invalid_password) { found_user.authenticate("invalid") }
 
     it { should_not == user_for_invalid_password }
     specify { user_for_invalid_password.should be_false }
   end 
- end    
+ end
+end    
 
  
