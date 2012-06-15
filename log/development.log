@@ -29480,3 +29480,23 @@ ActionController::RoutingError (uninitialized constant RelationshipsController):
   
 
 Rendered /Users/pinaraybar/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-15 15:48:43 -0700
+
+Errno::ENOENT (No such file or directory - /Users/pinaraybar/Documents/rails_apps/statis_rails_app/config/locales/en.yml):
+  
+
+Rendered /Users/pinaraybar/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/pinaraybar/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/pinaraybar/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-15 15:48:45 -0700
+
+Errno::ENOENT (No such file or directory - /Users/pinaraybar/Documents/rails_apps/statis_rails_app/config/locales/en.yml):
+  
+
+Rendered /Users/pinaraybar/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/pinaraybar/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/pinaraybar/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.4ms)
