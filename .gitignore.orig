@@ -1,0 +1,5 @@
+.bundle/config
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
